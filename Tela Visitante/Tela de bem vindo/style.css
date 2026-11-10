@@ -17,85 +17,48 @@ body {
 }
 
 
-nav {
-            display: flex;
-            width: 82%;
-            margin: 40px auto;
-            border: 2px solid #555;
-            border-radius: 8px;
-            overflow: hidden;
-        }
-
-        nav a {
-            flex: 1;
-            text-align: center;
-            padding: 5px;
-            text-decoration: none;
-            color: black;
-            border-right: 2px solid #555;
-            font-size: 14px;
-        }
-
-        nav a:last-child {
-            border-right: none;
-        }
-
-        nav a.ativo {
-            background: #91b4ed;
-        }
-
-
-
 /* Menu de navegação */
+nav {
+    display: flex;
+    width: 82%;
+    margin: 12px auto;
+    padding: 12px;
+    background-color: #004D40;
+    border: 2px solid #555;
+    border-radius: 8px;
+    overflow: hidden;
+}
 
+/* Links do menu */
 nav a {
-    color: white;
+    flex: 1;
+    text-align: center;
+    padding: 10px 18px;
     text-decoration: none;
+    color: white;
     font-size: 16px;
     font-weight: bold;
+    border-right: 2px solid #555;
     transition: 0.3s;
 }
 
-nav a:hover {
-    color: #4DB6AC;
+/* Remove a última divisão */
+nav a:last-child {
+    border-right: none;
 }
-/* Aba atual do menu */
-nav a[href="Home"] {
+
+/* Aba atualmente selecionada */
+nav a.ativo {
     background-color: #00796B;
     color: white;
-    padding: 10px 18px;
     border-radius: 6px;
     border-bottom: 3px solid #4DB6AC;
 }
 
-
 /* Efeito ao passar o mouse */
-nav a[href="#Home"]:hover {
+nav a:hover {
     background-color: #4DB6AC;
     color: #004D40;
-}
-
-
-/* Menu de navegação */
-nav {
-    background-color: #004D40;
-    padding: 12px;
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin: 12px auto;
-}
-
-nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #4DB6AC;
 }
 
 
