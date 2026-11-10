@@ -1,0 +1,146 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Atualização Institucional</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Menu de navegação -->
+    <nav>
+
+        <a href="#" class="inicio">⌂</a>
+
+        <a href="#">Registrar Abrigo</a>
+
+        <a href="#atualizacao" class="ativo">
+            Atualização Institucional
+        </a>
+
+        <a href="#">Emergências</a>
+
+        <div class="usuario">
+            <span>👤</span>
+            <button>Donatário</button>
+            <a href="#">➜</a>
+        </div>
+
+    </nav>
+
+    <!-- Conteúdo principal -->
+    <main class="container" id="atualizacao">
+
+        <!-- Título -->
+        <div class="titulo">
+            <h1>ATUALIZAR NECESSIDADES INSTITUCIONAIS</h1>
+            <span>✎</span>
+        </div>
+
+        <!-- Formulário -->
+        <section class="formulario">
+
+            <div class="campos">
+
+                <div class="campo">
+                    <label for="item">Nome do item</label>
+                    <input
+                        type="text"
+                        id="item"
+                        placeholder="Ex: Água Mineral">
+                </div>
+
+                <div class="campo">
+                    <label for="quantidade">Quantidade</label>
+                    <input
+                        type="number"
+                        id="quantidade"
+                        placeholder="Ex: 20"
+                        min="1">
+                </div>
+
+                <div class="campo">
+                    <label for="mensagem">Mensagem aos apoiadores</label>
+                    <textarea
+                        id="mensagem"
+                        placeholder="Digite uma mensagem..."></textarea>
+                </div>
+
+            </div>
+
+            <!-- Categorias -->
+            <div class="categorias">
+
+                <h3>Adicionar categoria</h3>
+
+                <div class="grade-categorias">
+
+                    <label>
+                        <span>👕</span>
+                        <input type="checkbox" name="categoria" value="Roupas">
+                    </label>
+
+                    <label>
+                        <span>🧸</span>
+                        <input type="checkbox" name="categoria" value="Brinquedos">
+                    </label>
+
+                    <label>
+                        <span>🛏️</span>
+                        <input type="checkbox" name="categoria" value="Cama e banho">
+                    </label>
+
+                    <label>
+                        <span>🍼</span>
+                        <input type="checkbox" name="categoria" value="Higiene">
+                    </label>
+
+                    <label>
+                        <span>💊</span>
+                        <input type="checkbox" name="categoria" value="Medicamentos">
+                    </label>
+
+                    <label>
+                        <span>🍽️</span>
+                        <input type="checkbox" name="categoria" value="Alimentos">
+                    </label>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Botão adicionar -->
+        <div class="area-botao">
+            <button id="adicionar">⊕ Adicionar Item</button>
+        </div>
+
+        <!-- Lista de itens -->
+        <section class="lista">
+
+            <h2>Itens cadastrados</h2>
+
+            <div id="itens">
+                <p class="vazio">Nenhum item cadastrado ainda.</p>
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Rodapé -->
+    <footer>
+        <a href="#">ⓘ Precisa de Ajuda?</a>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

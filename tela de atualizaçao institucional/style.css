@@ -1,0 +1,365 @@
+
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E0F2F1;
+    color: #004D40;
+    min-height: 100vh;
+}
+
+/* Menu de navegação */
+nav {
+    display: flex;
+    align-items: center;
+    width: 82%;
+    margin: 40px auto;
+    border: 2px solid #004D40;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Links do menu */
+nav > a {
+    flex: 1;
+    text-align: center;
+    padding: 10px 5px;
+    text-decoration: none;
+    color: #004D40;
+    border-right: 2px solid #004D40;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Link inicial */
+nav > a.inicio {
+    flex: 0.2;
+}
+
+/* Aba atual do menu */
+nav a.ativo {
+    background-color: #00796B;
+    color: white;
+}
+
+/* Efeito ao passar o mouse */
+nav > a:hover {
+    background-color: #4DB6AC;
+    color: #004D40;
+}
+
+/* Área do usuário */
+.usuario {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.usuario span {
+    font-size: 17px;
+    color: #004D40;
+}
+
+.usuario button {
+    padding: 6px 10px;
+    border: 1px solid #00796B;
+    border-radius: 5px;
+    background-color: white;
+    color: #004D40;
+    cursor: pointer;
+}
+
+.usuario a {
+    color: #004D40;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Conteúdo principal */
+.container {
+    width: 82%;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 77, 64, 0.15);
+}
+
+/* Título */
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #4DB6AC;
+    padding: 18px;
+    margin-bottom: 30px;
+    border-radius: 6px;
+}
+
+.titulo h1 {
+    font-size: 23px;
+    font-weight: normal;
+    color: #004D40;
+}
+
+.titulo span {
+    font-size: 27px;
+    color: #00796B;
+}
+
+/* Formulário */
+.formulario {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 35px;
+}
+
+/* Organização dos campos */
+.campos {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Texto dos campos */
+.campo label,
+.categorias h3 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #004D40;
+}
+
+/* Campos de preenchimento */
+.campo input,
+.campo textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #4DB6AC;
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+    background-color: white;
+}
+
+.campo input {
+    height: 43px;
+}
+
+.campo textarea {
+    height: 90px;
+    resize: vertical;
+}
+
+/* Efeito ao clicar nos campos */
+.campo input:focus,
+.campo textarea:focus {
+    border-color: #00796B;
+    box-shadow: 0 0 5px rgba(0, 121, 107, 0.3);
+}
+
+/* Categorias */
+.categorias h3 {
+    margin-bottom: 12px;
+}
+
+/* Grade de categorias */
+.grade-categorias {
+    border: 2px solid #4DB6AC;
+    border-radius: 6px;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Organização das categorias */
+.grade-categorias label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Efeito nas categorias */
+.grade-categorias label:hover {
+    background-color: #E0F2F1;
+}
+
+.grade-categorias span {
+    font-size: 25px;
+}
+
+/* Caixas de seleção */
+.grade-categorias input {
+    width: 16px;
+    height: 16px;
+    accent-color: #00796B;
+    cursor: pointer;
+}
+
+/* Área do botão */
+.area-botao {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 45px;
+}
+
+/* Botão adicionar */
+.area-botao button {
+    background-color: #00796B;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    padding: 12px 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Efeito do botão */
+.area-botao button:hover {
+    background-color: #004D40;
+}
+
+/* Lista de itens cadastrados */
+.lista {
+    margin-top: 45px;
+    border-top: 1px solid #B2DFDB;
+    padding-top: 25px;
+}
+
+.lista h2 {
+    color: #00796B;
+    font-size: 22px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+/* Cartões dos itens */
+.item-card {
+    border: 1px solid #4DB6AC;
+    border-radius: 8px;
+    padding: 18px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.item-card h3 {
+    color: #004D40;
+    margin-bottom: 8px;
+}
+
+.item-card p {
+    font-size: 14px;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* Botão excluir */
+.excluir {
+    background-color: #FCE8E8;
+    color: #B52B2B;
+    border: none;
+    padding: 9px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.excluir:hover {
+    background-color: #E9BABA;
+}
+
+/* Mensagem de lista vazia */
+.vazio {
+    color: #777;
+    font-size: 14px;
+}
+
+/* Rodapé */
+footer {
+    width: 82%;
+    margin: 40px auto 20px;
+    padding: 15px 0;
+    border-top: 1px solid #80CBC4;
+}
+
+footer a {
+    color: #004D40;
+    font-size: 13px;
+    text-decoration: none;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 700px) {
+
+    nav {
+        width: 95%;
+        margin: 20px auto;
+        flex-wrap: wrap;
+    }
+
+    nav > a {
+        font-size: 12px;
+        padding: 10px 4px;
+    }
+
+    .usuario {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .container {
+        width: 95%;
+        margin: 25px auto;
+        padding: 20px;
+    }
+
+    .titulo h1 {
+        font-size: 17px;
+    }
+
+    .formulario {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .area-botao {
+        margin-top: 30px;
+    }
+
+    .area-botao button {
+        width: 100%;
+    }
+
+    .item-card {
+        align-items: flex-start;
+    }
+
+    footer {
+        width: 95%;
+    }
+}
