@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Doação - Abrigos Cadastrados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho e Navegação (Idêntico à Primeira Tela, com "Abrigos" ativo) -->
+    <header class="topo-container">
+        <nav>
+            <a href="index.html" class="inicio" title="Início">Home</a>
+            <a href="abrigos.html" class="ativo">Abrigos</a>
+            <a href="#doacoes">Realizar Doações</a>
+            <a href="#historico">Histórico</a>
+        </nav>
+
+        <div class="usuario">
+            <span class="icone-perfil">👤</span>
+            <button type="button" class="btn-perfil">Doador</button>
+            <a href="#sair" class="btn-sair" title="Sair">➜</a>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container-principal">
+
+        <!-- Painel Superior: Filtros de Pesquisa -->
+        <section class="painel painel-filtros">
+            <div class="filtros-titulo">
+                <h1>ABRIGOS<br>CADASTRADOS</h1>
+            </div>
+
+            <form class="filtros-form">
+                <!-- Coluna 1: Pesquisar por nome -->
+                <div class="filtro-coluna">
+                    <div class="input-icone">
+                        <span>🔍</span>
+                        <input type="text" placeholder="Pesquisar abrigos">
+                    </div>
+                </div>
+
+                <!-- Coluna 2: CEP, Estado e Cidade -->
+                <div class="filtro-coluna">
+                    <div class="input-icone">
+                        <span>🔍</span>
+                        <input type="text" placeholder="CEP">
+                    </div>
+                    <div class="filtro-selects">
+                        <select aria-label="Estado">
+                            <option value="">Estado</option>
+                            <option value="ES">ES</option>
+                            <option value="MG">MG</option>
+                            <option value="RJ">RJ</option>
+                            <option value="SP">SP</option>
+                        </select>
+                        <select aria-label="Cidade">
+                            <option value="">Cidade</option>
+                            <option value="Vila Velha">Vila Velha</option>
+                            <option value="Vitória">Vitória</option>
+                            <option value="São Paulo">São Paulo</option>
+                        </select>
+                    </div>
+                </div>
+
+                <!-- Coluna 3: Botões Limpar e Buscar -->
+                <div class="filtro-botoes">
+                    <button type="reset" class="btn-filtro">↻ Limpar filtros</button>
+                    <button type="submit" class="btn-filtro btn-buscar">✓ Buscar</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Painel Inferior: Detalhes do Abrigo -->
+        <section class="painel painel-detalhe-abrigo">
+            
+            <!-- Topo do Card do Abrigo -->
+            <div class="detalhe-cabecalho">
+                <div class="titulo-abrigo-info">
+                    <span class="icone-info">ℹ</span>
+                    <h2>Casa de Acolhimento Luz e Vida (Abrigo Infantil)</h2>
+                </div>
+                <div class="acoes-cabecalho">
+                    <button type="button" class="btn-icone" title="Favoritar">☆</button>
+                    <!-- Botão X volta para a primeira tela (index.html) -->
+                    <button type="button" class="btn-icone" title="Fechar e voltar" onclick="window.location.href='index.html'">✕</button>
+                </div>
+            </div>
+
+            <!-- Corpo do Abrigo: Foto à esquerda e Abas à direita -->
+            <div class="detalhe-corpo">
+                
+                <!-- Coluna Esquerda: Galeria de Fotos + Coordenador -->
+                <div class="coluna-midia">
+                    <div class="carrossel-container">
+                        <button type="button" class="seta-carrossel" title="Foto anterior">❮</button>
+                        <div class="caixa-foto-abrigo"></div>
+                        <button type="button" class="seta-carrossel" title="Próxima foto">❯</button>
+                    </div>
+
+                    <div class="coordenador-info">
+                        <span class="icone-coordenador">👤</span>
+                        <span>Coordenado por: <strong>Guilherme L. Zhu</strong></span>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita: Abas e Botão Realizar Doação -->
+                <div class="coluna-informacoes">
+                    <div class="abas-wrapper">
+                        <div class="abas-menu">
+                            <button type="button" class="aba-item">Início</button>
+                            <button type="button" class="aba-item">Sobre</button>
+                            <button type="button" class="aba-item">Localização</button>
+                            <button type="button" class="aba-item ativa">Necessidades</button>
+                        </div>
+
+                        <div class="aba-painel-conteudo">
+                            <div class="item-necessidade">
+                                <span class="icone-item">👕</span>
+                                <span>Roupas</span>
+                            </div>
+                            <div class="item-necessidade">
+                                <span class="icone-item">🧸</span>
+                                <span>Brinquedos</span>
+                            </div>
+                            <div class="item-necessidade">
+                                <span class="icone-item">🛏️</span>
+                                <span>Cobertores / Roupas de cama</span>
+                            </div>
+                            <div class="item-necessidade">
+                                <span class="icone-item">🧼</span>
+                                <span>Produtos de higiene pessoal</span>
+                            </div>
+                            <div class="item-necessidade">
+                                <span class="icone-item">🍎</span>
+                                <span>Alimentos</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button type="button" class="btn-realizar-doacao">Realizar Doação</button>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé / Ajuda -->
+    <footer class="rodape-ajuda">
+        <span class="icone-interrogacao">?</span>
+        <button type="button" class="btn-ajuda">Precisa de Ajuda?</button>
+    </footer>
+
+</body>
+</html>

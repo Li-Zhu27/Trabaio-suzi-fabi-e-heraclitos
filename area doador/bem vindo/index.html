@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conexão Doação - Área do Doador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-B/GM4XqrwHnWXNOWMbloTmrYXZg10cakYGmpfsR/bbzQ6JAJI4ihuyADKLnBgrCe" crossorigin="anonymous">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-1a/pXj49ZQ1aHEmrJ+gMw1otqoVsYwlEnlD8mIfY2TV03r20Y0CN7uqx1tQogjPL" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Cabeçalho e Navegação -->
+    <header class="topo-container">
+        <nav>
+            <a href="index.html" class="inicio ativo" title="Início">Home</a>
+            <a href="abrigos.html">Abrigos</a>
+            <a href="#doacoes">Realizar Doações</a>
+            <a href="#historico">Histórico</a>
+        </nav>
+
+        <div class="usuario">
+            <span class="icone-perfil">👤</span>
+            <button type="button" class="btn-perfil">Doador</button>
+            <a href="#sair" class="btn-sair" title="Sair">➜</a>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="container-principal">
+
+        <!-- Seção: Boas-vindas -->
+        <section class="painel painel-boas-vindas">
+            <span class="subtitulo-topo">ÁREA DO DOADOR</span>
+            
+            <div class="boas-vindas-conteudo">
+                <div class="boas-vindas-texto">
+                    <h1>Boas vindas</h1>
+                    <p>Encontre abrigos necessitados, faça doações e apoie.</p>
+                </div>
+
+                <div class="card-estatistica">
+                    <span class="numero-destaque">67</span>
+                    <div class="texto-estatistica">
+                        <strong>DOAÇÕES REALIZADAS</strong>
+                        <span>Nos últimos 30 dias</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção: Abrigos em Urgência -->
+        <section class="painel painel-urgencia">
+            <div class="titulo-urgencia">
+                <h2>Abrigos em URGÊNCIA</h2>
+                <span class="icone-alerta">⚠️</span>
+            </div>
+
+            <div class="grid-abrigos">
+                <!-- Card Abrigo 1 -->
+                <div class="card-abrigo">
+                    <h3>Abrigo Infantil</h3>
+                    <p>Apoie projetos que atendem crianças, idosos e famílias em situação de vulnerabilidade.</p>
+                    
+                    <div class="lista-itens">
+                        <label><input type="checkbox"> Roupas</label>
+                        <label><input type="checkbox"> Brinquedos</label>
+                        <label><input type="checkbox"> Cobertores</label>
+                        <label><input type="checkbox"> Produtos de higiene pessoal</label>
+                        <label><input type="checkbox"> Alimentos</label>
+                    </div>
+
+                    <button type="button" class="btn-conheca" onclick="window.location.href='abrigos.html'">Conheça Agora</button>
+                </div>
+
+                <!-- Card Abrigo 2 -->
+                <div class="card-abrigo">
+                    <h3>Abrigo para Mulheres em Situação de Risco</h3>
+                    <p>Apoie mulheres que buscam proteção e recomeço em ambientes seguros.</p>
+                    
+                    <div class="lista-itens">
+                        <label><input type="checkbox"> Roupas</label>
+                        <label><input type="checkbox"> Brinquedos</label>
+                        <label><input type="checkbox"> Cobertores</label>
+                        <label><input type="checkbox"> Produtos de higiene pessoal</label>
+                        <label><input type="checkbox"> Alimentos</label>
+                    </div>
+
+                    <button type="button" class="btn-conheca" onclick="window.location.href='abrigos.html'">Conheça Agora</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Rodapé / Ajuda -->
+    <footer class="rodape-ajuda">
+        <span class="icone-interrogacao">?</span>
+        <button type="button" class="btn-ajuda">Precisa de Ajuda?</button>
+    </footer>
+
+</body>
+</html>

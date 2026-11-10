@@ -1,0 +1,751 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E0F2F1;
+    color: #004D40;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Container do Topo (Menu + Usuário) */
+.topo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 94%;
+    max-width: 1650px;
+    margin: 15px auto 12px auto;
+    gap: 25px;
+    flex-shrink: 0;
+}
+
+/* Menu de navegação */
+nav {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    border: 2px solid #004D40;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+/* Links do menu */
+nav > a {
+    flex: 1;
+    text-align: center;
+    padding: 12px 10px;
+    text-decoration: none;
+    color: #004D40;
+    border-right: 2px solid #004D40;
+    font-size: 18px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav > a:last-child {
+    border-right: none;
+}
+
+/* Link inicial (Home) */
+nav > a.inicio {
+    flex: 0.2;
+    font-size: 20px;
+}
+
+/* Aba atual do menu */
+nav a.ativo {
+    background-color: #00796B;
+    color: white;
+}
+
+/* Efeito ao passar o mouse */
+nav > a:hover {
+    background-color: #4DB6AC;
+    color: #004D40;
+}
+
+/* Área do Usuário (Direita do Menu) */
+.usuario {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icone-perfil {
+    font-size: 22px;
+    border: 2px solid #004D40;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+}
+
+.btn-perfil {
+    background-color: white;
+    color: #004D40;
+    border: 2px solid #004D40;
+    border-radius: 10px;
+    padding: 8px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-perfil:hover {
+    background-color: #4DB6AC;
+}
+
+.btn-sair {
+    text-decoration: none;
+    color: #004D40;
+    font-size: 26px;
+    font-weight: bold;
+    padding: 4px 8px;
+    transition: 0.3s;
+}
+
+.btn-sair:hover {
+    color: #00796B;
+}
+
+/* Container Principal */
+.container-principal {
+    width: 94%;
+    max-width: 1650px;
+    margin: 0 auto;
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Estilo Base dos Painéis */
+.painel {
+    background-color: white;
+    border: 2px solid #004D40;
+    border-radius: 10px;
+    padding: 18px 35px;
+    box-shadow: 0 4px 12px rgba(0, 77, 64, 0.08);
+}
+
+/* =========================================
+   ESTILOS DA PRIMEIRA TELA (index.html)
+   ========================================= */
+.painel-boas-vindas {
+    flex-shrink: 0;
+}
+
+.subtitulo-topo {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    font-weight: bold;
+    color: #00796B;
+    letter-spacing: 1.5px;
+    margin-bottom: 6px;
+}
+
+.boas-vindas-conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.boas-vindas-texto h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #004D40;
+    margin-bottom: 8px;
+}
+
+.boas-vindas-texto p {
+    font-size: 20px;
+    line-height: 1.4;
+    max-width: 650px;
+    margin: 0;
+}
+
+.card-estatistica {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    border: 2px solid #004D40;
+    border-radius: 10px;
+    padding: 16px 32px;
+    background-color: #E0F2F1;
+    min-width: 380px;
+}
+
+.numero-destaque {
+    font-size: 52px;
+    font-weight: bold;
+    color: #00796B;
+    line-height: 1;
+}
+
+.texto-estatistica {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.texto-estatistica strong {
+    font-size: 19px;
+    color: #004D40;
+}
+
+.texto-estatistica span {
+    font-size: 17px;
+    color: #00796B;
+}
+
+.painel-urgencia {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo-urgencia {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+}
+
+.titulo-urgencia h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.icone-alerta {
+    font-size: 26px;
+}
+
+.grid-abrigos {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: stretch;
+    gap: 35px;
+    flex: 1;
+    min-height: 0;
+}
+
+.card-abrigo {
+    border: 2px solid #004D40;
+    border-radius: 10px;
+    padding: 18px 30px;
+    flex: 1;
+    max-width: 550px;
+    background-color: #E0F2F1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-abrigo h3 {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 6px;
+}
+
+.card-abrigo p {
+    font-size: 19px;
+    line-height: 1.35;
+    margin-bottom: 10px;
+}
+
+.lista-itens {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.lista-itens label {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 19px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.lista-itens input[type="checkbox"] {
+    accent-color: #00796B;
+    width: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+
+.btn-conheca {
+    margin-top: auto;
+    background-color: #00796B;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-conheca:hover {
+    background-color: #4DB6AC;
+    color: #004D40;
+}
+
+/* =========================================
+   ESTILOS DA SEGUNDA TELA (abrigos.html)
+   ========================================= */
+.painel-filtros {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    padding: 18px 35px;
+}
+
+.filtros-titulo h1 {
+    font-size: 32px;
+    font-weight: bold;
+    color: #004D40;
+    line-height: 1.15;
+    margin: 0;
+}
+
+.filtros-form {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.filtro-coluna {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    flex: 1;
+    max-width: 340px;
+}
+
+.input-icone {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid #004D40;
+    border-radius: 25px;
+    padding: 8px 18px;
+    background-color: #E0F2F1;
+}
+
+.input-icone input {
+    border: none;
+    background: transparent;
+    outline: none;
+    width: 100%;
+    font-size: 18px;
+    color: #004D40;
+    font-weight: 500;
+}
+
+.input-icone input::placeholder {
+    color: #00796B;
+}
+
+.filtro-selects {
+    display: flex;
+    gap: 15px;
+}
+
+.filtro-selects select {
+    flex: 1;
+    border: 2px solid #004D40;
+    border-radius: 8px;
+    padding: 7px 12px;
+    font-size: 17px;
+    font-weight: bold;
+    color: #004D40;
+    background-color: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.filtro-botoes {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    min-width: 180px;
+}
+
+.btn-filtro {
+    border: 2px solid #004D40;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: white;
+    color: #004D40;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-filtro:hover {
+    background-color: #4DB6AC;
+}
+
+.btn-buscar {
+    background-color: #00796B;
+    color: white;
+}
+
+.btn-buscar:hover {
+    background-color: #004D40;
+    color: white;
+}
+
+/* Painel Inferior de Detalhes do Abrigo */
+.painel-detalhe-abrigo {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.detalhe-cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+}
+
+.titulo-abrigo-info {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.icone-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border: 2px solid #004D40;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 22px;
+    background-color: #E0F2F1;
+}
+
+.titulo-abrigo-info h2 {
+    font-size: 30px;
+    font-weight: bold;
+    margin: 0;
+    color: #004D40;
+}
+
+.acoes-cabecalho {
+    display: flex;
+    gap: 18px;
+}
+
+.btn-icone {
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: #004D40;
+    cursor: pointer;
+    line-height: 1;
+    transition: 0.2s;
+}
+
+.btn-icone:hover {
+    color: #00796B;
+    transform: scale(1.1);
+}
+
+/* Corpo do Detalhe */
+.detalhe-corpo {
+    display: flex;
+    gap: 50px;
+    flex: 1;
+    min-height: 0;
+    align-items: stretch;
+}
+
+/* Coluna da Esquerda: Carrossel de Foto + Coordenador */
+.coluna-midia {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 0.85;
+    min-height: 0;
+}
+
+.carrossel-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    flex: 1;
+    min-height: 0;
+}
+
+.seta-carrossel {
+    background: none;
+    border: none;
+    font-size: 34px;
+    font-weight: bold;
+    color: #004D40;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: 0.2s;
+}
+
+.seta-carrossel:hover {
+    color: #4DB6AC;
+}
+
+.caixa-foto-abrigo {
+    width: 100%;
+    max-width: 310px;
+    height: 100%;
+    max-height: 230px;
+    border: 2px solid #004D40;
+    border-radius: 10px;
+    background-color: #E0F2F1;
+    /* Linhas cruzadas igual ao seu protótipo */
+    background-image: 
+        linear-gradient(to top right, transparent calc(50% - 1px), #004D40, transparent calc(50% + 1px)),
+        linear-gradient(to bottom right, transparent calc(50% - 1px), #004D40, transparent calc(50% + 1px));
+}
+
+.coordenador-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 19px;
+    margin-top: 10px;
+}
+
+.icone-coordenador {
+    width: 38px;
+    height: 38px;
+    border: 2px solid #004D40;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #E0F2F1;
+    font-size: 18px;
+}
+
+/* Coluna da Direita: Abas + Botão Realizar Doação */
+.coluna-informacoes {
+    flex: 1.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 14px;
+    min-height: 0;
+}
+
+.abas-wrapper {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+}
+
+.abas-menu {
+    display: flex;
+    flex-direction: column;
+    width: 180px;
+    padding-top: 14px;
+}
+
+.aba-item {
+    padding: 12px 16px;
+    border: 2px solid #004D40;
+    border-right: none;
+    border-bottom: none;
+    background-color: #CBD5E1;
+    color: #004D40;
+    font-size: 19px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.aba-item:first-child {
+    border-top-left-radius: 8px;
+}
+
+.aba-item:last-child {
+    border-bottom: 2px solid #004D40;
+    border-bottom-left-radius: 8px;
+}
+
+.aba-item.ativa {
+    background-color: #E0F2F1;
+    color: #004D40;
+    position: relative;
+    z-index: 2;
+    margin-right: -2px;
+}
+
+.aba-item:hover:not(.ativa) {
+    background-color: #4DB6AC;
+}
+
+.aba-painel-conteudo {
+    flex: 1;
+    border: 2px solid #004D40;
+    border-radius: 10px;
+    background-color: #E0F2F1;
+    padding: 18px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.item-necessidade {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    font-size: 21px;
+    font-weight: bold;
+    color: #004D40;
+}
+
+.icone-item {
+    font-size: 26px;
+    width: 36px;
+    text-align: center;
+}
+
+.btn-realizar-doacao {
+    width: calc(100% - 180px);
+    margin-left: auto;
+    background-color: #00796B;
+    color: white;
+    border: 2px solid #004D40;
+    border-radius: 10px;
+    padding: 12px;
+    font-size: 21px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-realizar-doacao:hover {
+    background-color: #4DB6AC;
+    color: #004D40;
+}
+
+/* Rodapé: Precisa de Ajuda */
+.rodape-ajuda {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 94%;
+    max-width: 1650px;
+    margin: 10px auto 14px auto;
+    flex-shrink: 0;
+}
+
+.icone-interrogacao {
+    width: 34px;
+    height: 34px;
+    border: 2px solid #004D40;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 17px;
+    background-color: white;
+}
+
+.btn-ajuda {
+    background-color: white;
+    color: #004D40;
+    border: 2px solid #004D40;
+    border-radius: 10px;
+    padding: 6px 18px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-ajuda:hover {
+    background-color: #4DB6AC;
+}
+
+/* Responsividade para celulares */
+@media (max-width: 950px) {
+    body {
+        height: auto;
+        overflow-y: auto;
+    }
+
+    .topo-container,
+    .boas-vindas-conteudo,
+    .grid-abrigos,
+    .painel-filtros,
+    .filtros-form,
+    .detalhe-corpo,
+    .abas-wrapper {
+        flex-direction: column;
+    }
+
+    .topo-container,
+    .container-principal {
+        width: 95%;
+    }
+
+    nav,
+    .card-estatistica,
+    .card-abrigo,
+    .filtro-coluna,
+    .abas-menu,
+    .btn-realizar-doacao {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .aba-item {
+        border-right: 2px solid #004D40;
+    }
+
+    .aba-item.ativa {
+        margin-right: 0;
+    }
+}
