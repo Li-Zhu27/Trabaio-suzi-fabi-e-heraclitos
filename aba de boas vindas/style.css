@@ -1,143 +1,347 @@
-        /* Configurações gerais */
+
+/* CONFIGURAÇÕES GERAIS */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    min-height: 100%;
+}
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #E0F2F1;
     color: #004D40;
-    height: 100vh;
-    height: 100dvh;
-    overflow: hidden;
+    min-height: 100vh;
+
     display: flex;
     flex-direction: column;
+
+    padding: 15px 20px;
 }
 
+/* MENU DE NAVEGAÇÃO */
 
-/* Menu de navegação */
+.menu {
+    width: 100%;
+    margin-bottom: 25px;
+}
+
 nav {
     display: flex;
     width: 82%;
-    margin: 12px auto;
-    padding: 12px;
-    background-color: #004D40;
-    border: 2px solid #555;
+    min-height: 50px;
+    margin: 20px auto;
+
+    border: 2px solid #004D40;
     border-radius: 8px;
     overflow: hidden;
+
+    background-color: #004D40;
+    align-items: center;
+    justify-content: space-between;
 }
 
-/* Links do menu */
 nav a {
     flex: 1;
     text-align: center;
-    padding: 10px 18px;
+    padding: 14px 8px;
+
     text-decoration: none;
     color: white;
-    font-size: 16px;
+
+    border-right: 1px solid #4DB6AC;
+
+    font-size: 14px;
     font-weight: bold;
-    border-right: 2px solid #555;
+
     transition: 0.3s;
 }
 
-/* Remove a última divisão */
 nav a:last-child {
     border-right: none;
 }
 
-/* Aba atualmente selecionada */
-nav a.ativo {
-    background-color: #00796B;
-    color: white;
-    border-radius: 6px;
-    border-bottom: 3px solid #4DB6AC;
-}
-
-/* Efeito ao passar o mouse */
 nav a:hover {
     background-color: #4DB6AC;
     color: #004D40;
 }
 
-
- #Bem_Vindo {
-    text-align: center;
-    margin: 0 12px 12px;
+nav a.inicio {
+    background-color: #00796B;
+    color: white;
 }
 
-/* Responsividade para celulares */
-@media (max-width: 650px) {
-
-    nav {
-        gap: 15px;
-        flex-wrap: wrap;
-    }
-
-    section {
-        margin: 20px;
-        padding: 20px;
-    }
-
-    button {
-        width: 100%;
-        margin-bottom: 10px;
-    }
+.usuario {
+    color: white;
+    font-size: 23px;
+    padding: 5px;
 }
 
+.donatario {
+    background-color: #4DB6AC;
+    color: #004D40;
 
-.caixa-info {
-    /* Define a borda preta sólida */
-    border: 2px solid black; 
-    
-    /* Espaço entre o texto e a borda da caixa */
-    padding: 20px; 
-    
-    /* Espaço abaixo da caixa para separá-la da próxima */
-    margin: 0 20px 12px;
-    
-    /* Largura máxima da caixa para não ocupar o ecrã todo */
-    max-width: 600px; 
-    
-    /* Tipo de letra sem serifas, semelhante ao da imagem */
-    font-family: sans-serif; 
-    font-size: 18px;
-    line-height: 1.4;
+    border: none;
+    border-radius: 6px;
 
+    padding: 8px 12px;
+    margin: 5px;
 
-    width: min(600px, calc(100% - 40px));
-  }
-
-
-.btn-subtle {
-    align-self: flex-start;
-    margin: auto 0 12px 20px;
+    font-weight: bold;
+    cursor: pointer;
 }
+
+.donatario:hover {
+    background-color: white;
+}
+
+.sair {
+    color: white;
+    font-size: 25px;
+    margin: 0 10px;
+}
+
+/* CAIXA PRINCIPAL */
+
+.container {
+    width: 100%;
+    flex: 1;
+    min-height: 500px;
+
+    background-color: white;
+
+    border: 2px solid #4DB6AC;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    padding: 25px;
+
+    box-shadow: 0 4px 15px rgba(0, 77, 64, 0.12);
+}
+
+/* BOAS VINDAS */
+
+.boas-vindas {
+    width: 48%;
+}
+
+.boas-vindas h1 {
+    color: #00796B;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.boas-vindas h2 {
+    color: #004D40;
+    font-size: 19px;
+    font-weight: normal;
+    max-width: 430px;
+    line-height: 1.5;
+}
+
+/* IMAGEM ILUSTRATIVA */
 
 .caixa-imagem_ilustrativa {
-    position: fixed;
-    top: 200px;
-    right: 20px;
-    bottom: 20px;
-    border: 2px solid black;
+    width: 450px;
+    height: 450px;
+
+    margin-top: 25px;
+
+    background-color: #E0F2F1;
+
+    border: 2px solid #4DB6AC;
+    border-radius: 12px;
+
     padding: 20px;
-    width: 45vw;
-    max-width: none;
+
     font-family: sans-serif;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.4;
     text-align: center;
+
+    color: #00796B;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
+    box-shadow: 0 4px 15px rgba(0, 77, 64, 0.15);
 }
 
+/* ÁREA DO DONATÁRIO */
+
+.area-doacoes {
+    width: 48%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 25px;
+}
+
+.area-doacoes h3 {
+    color: #00796B;
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+/* CAIXAS DE DOAÇÕES */
+
+.card {
+    width: 100%;
+    min-height: 120px;
+
+    background-color: #E0F2F1;
+
+    border: 2px solid #4DB6AC;
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 20px;
+    gap: 15px;
+
+    box-shadow: 0 4px 12px rgba(0, 77, 64, 0.12);
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 77, 64, 0.2);
+}
+
+/* NÚMEROS */
+
+.numero {
+    color: #00796B;
+    font-size: 42px;
+    font-weight: bold;
+}
+
+/* INFORMAÇÕES */
+
+.informacoes p {
+    color: #004D40;
+    font-size: 19px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.informacoes span {
+    color: #00796B;
+    font-size: 17px;
+}
+
+/* RODAPÉ */
+
+footer {
+    width: 100%;
+    padding-top: 15px;
+}
+
+.ajuda {
+    background-color: #00796B;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    padding: 10px 18px;
+    font-size: 13px;
+    font-weight: bold;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ajuda:hover {
+    background-color: #004D40;
+}
+
+/* RESPONSIVIDADE */
+
 @media (max-width: 700px) {
+
+    body {
+        padding: 10px;
+    }
+
+    nav {
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 10px auto;
+    }
+
+    nav a {
+        min-height: 40px;
+        font-size: 11px;
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 30px;
+        min-height: 75vh;
+        padding: 15px;
+    }
+
+    .boas-vindas {
+        width: 100%;
+    }
+
+    .boas-vindas h1 {
+        font-size: 27px;
+    }
+
     .caixa-imagem_ilustrativa {
-        right: 12px;
-        width: 40vw;
+        width: 100%;
+        max-width: 450px;
+        aspect-ratio: 1 / 1;
+        height: auto;
+
         padding: 8px;
         font-size: 14px;
+    }
+
+    .area-doacoes {
+        width: 100%;
+        gap: 18px;
+    }
+
+    .area-doacoes h3 {
+        font-size: 18px;
+    }
+
+    .card {
+        width: 100%;
+        min-height: 110px;
+    }
+
+    .numero {
+        font-size: 35px;
+    }
+
+    .informacoes p {
+        font-size: 16px;
+    }
+
+    .informacoes span {
+        font-size: 14px;
+    }
+
+    .ajuda {
+        width: auto;
     }
 }
